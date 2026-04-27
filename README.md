@@ -60,9 +60,9 @@ Compatível com macOS, Windows e Linux.
 
 ### macOS
 
-| Arquivo                               | Arquitetura                       | Requisito                        |
-| ------------------------------------- | --------------------------------- | -------------------------------- |
-| [Rádio 96 FM Anápolis.dmg ↓][dmg-url] | Universal (Apple Silicon + Intel) | macOS 10.15 Catalina ou superior |
+| Arquivo                                               | Arquitetura                       | Requisito                        |
+| ----------------------------------------------------- | --------------------------------- | -------------------------------- |
+| [Radio.96.FM.Anapolis_1.0.0_universal.dmg ↓][dmg-url] | Universal (Apple Silicon + Intel) | macOS 10.15 Catalina ou superior |
 
 **Como instalar:**
 
@@ -71,38 +71,38 @@ Na primeira abertura, clique com o botão direito no ícone e escolha **Abrir** 
 
 ### Windows
 
-| Arquivo                                     | Tipo                            | Arquitetura |
-| ------------------------------------------- | ------------------------------- | ----------- |
-| [Rádio 96 FM Anápolis Setup.exe ↓][exe-url] | Instalador padrão (recomendado) | x64         |
-| [Rádio 96 FM Anápolis.msi ↓][msi-url]       | Instalador corporativo (MSI)    | x64         |
+| Arquivo                                               | Tipo                            | Arquitetura |
+| ----------------------------------------------------- | ------------------------------- | ----------- |
+| [Radio.96.FM.Anapolis_1.0.0_x64-setup.exe ↓][exe-url] | Instalador padrão (recomendado) | x64         |
+| [Radio.96.FM.Anapolis_1.0.0_x64_en-US.msi ↓][msi-url] | Instalador corporativo (MSI)    | x64         |
 
 Execute o instalador e siga as instruções na tela.
 
 ### Linux
 
-| Arquivo                                               | Formato       | Indicado para                  |
-| ----------------------------------------------------- | ------------- | ------------------------------ |
-| [Radio.96.FM.Anapolis_amd64.AppImage ↓][appimage-url] | AppImage      | Qualquer distro (recomendado)  |
-| [Radio.96.FM.Anapolis_amd64.deb ↓][deb-url]           | Debian/Ubuntu | Ubuntu, Debian, Mint, Pop!_OS  |
-| [Radio.96.FM.Anapolis-1.x86_64.rpm ↓][rpm-url]        | Fedora/RHEL   | Fedora, openSUSE, RHEL, CentOS |
+| Arquivo                                                     | Formato       | Indicado para                  |
+| ----------------------------------------------------------- | ------------- | ------------------------------ |
+| [Radio.96.FM.Anapolis_1.0.0_amd64.AppImage ↓][appimage-url] | AppImage      | Qualquer distro (recomendado)  |
+| [Radio.96.FM.Anapolis_1.0.0_amd64.deb ↓][deb-url]           | Debian/Ubuntu | Ubuntu, Debian, Mint, Pop!_OS  |
+| [Radio.96.FM.Anapolis-1.0.0-1.x86_64.rpm ↓][rpm-url]        | Fedora/RHEL   | Fedora, openSUSE, RHEL, CentOS |
 
 #### AppImage
 
 ```bash
-chmod +x Radio.96.FM.Anapolis_amd64.AppImage
-./Radio.96.FM.Anapolis_amd64.AppImage
+chmod +x Radio.96.FM.Anapolis_1.0.0_amd64.AppImage
+./Radio.96.FM.Anapolis_1.0.0_amd64.AppImage
 ```
 
 #### Debian/Ubuntu
 
 ```bash
-sudo dpkg -i Radio.96.FM.Anapolis_amd64.deb
+sudo dpkg -i Radio.96.FM.Anapolis_1.0.0_amd64.deb
 ```
 
 #### RPM
 
 ```bash
-sudo rpm -i Radio.96.FM.Anapolis-1.x86_64.rpm
+sudo rpm -i Radio.96.FM.Anapolis-1.0.0-1.x86_64.rpm
 ```
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
@@ -141,9 +141,9 @@ Abra uma [issue][issues-url] ou entre em contato com a equipe da rádio.
 [latest-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest
 [releases-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases
 
-[appimage-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis_amd64.AppImage
-[deb-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis_amd64.deb
-[dmg-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis_universal.dmg
-[exe-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis_x64-setup.exe
-[msi-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis_x64_en-US.msi
-[rpm-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/latest/download/Radio.96.FM.Anapolis-1.x86_64.rpm
+[appimage-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis_1.0.0_amd64.AppImage
+[deb-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis_1.0.0_amd64.deb
+[dmg-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis_1.0.0_universal.dmg
+[exe-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis_1.0.0_x64-setup.exe
+[msi-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis_1.0.0_x64_en-US.msi
+[rpm-url]: https://github.com/demartini/radio-96-fm-anapolis-desktop-releases/releases/download/v1.0.0/Radio.96.FM.Anapolis-1.0.0-1.x86_64.rpm
