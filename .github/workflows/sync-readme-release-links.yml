@@ -1,0 +1,61 @@
+name: Sync README Release Links
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: 24
+
+      - name: Resolve release payload
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const fs = require('node:fs');
+
+            let release = context.payload.release;
+
+            if (!release) {
+              const response = await github.rest.repos.getLatestRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+              });
+              release = response.data;
+            }
+
+            fs.writeFileSync('release.json', JSON.stringify(release, null, 2));
+
+      - name: Sync README
+        run: node scripts/sync-readme-release-assets.mjs release.json README.md
+
+      - name: Commit README changes
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README already up to date"
+            exit 0
+          fi
+
+          VERSION="$(node -p "JSON.parse(require('node:fs').readFileSync('release.json', 'utf8')).tag_name")"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: sync README download links for ${VERSION}"
+          git push
